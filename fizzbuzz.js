@@ -38,9 +38,9 @@ exports.me = (function () {
                 output = [];
 
             for ( var start = start, end = end; start <= end; start++ ) {
-                if ( self.isFizz( start ) ) {
+                if ( self.isFizz( start ) && !self.isMe( start ) ) {
                     output.push('Fizz');    
-                } else if ( self.isBuzz( start ) ) {
+                } else if ( self.isBuzz( start ) && !self.isMe( start ) ) {
                     output.push('Buzz');    
                 } else if ( self.isMe( start ) ) {
                     output.push('FizzBuzz');    
